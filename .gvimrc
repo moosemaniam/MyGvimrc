@@ -12,6 +12,7 @@ map <Leader>d <esc>:cn<CR>
 map <Leader>e <esc>:cp<CR>
 map <Leader>c :w!<CR>:!python % <CR>
 map <Leader>s :w!<CR>
+map <Leader>f za
 set nobackup
 set shiftwidth=4
 set expandtab
@@ -31,6 +32,8 @@ set nowb
 set noswapfile
 set relativenumber
 set ru
+set foldmethod=indent
+set foldlevel=99
 map  <C-l> :tabn<CR>
 map  <C-h> :tabp<CR>
 " Smart way to move between windows
