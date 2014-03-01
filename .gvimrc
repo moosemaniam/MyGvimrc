@@ -1,4 +1,3 @@
-set tabstop=4
 set winminheight=0
 map <F9> :!gcc -o test.out % <CR> 
 inoremap jk <esc>
@@ -13,8 +12,12 @@ map <Leader>e <esc>:cp<CR>
 map <Leader>c :w!<CR>:!python % <CR>
 map <Leader>s :w!<CR>
 map <Leader>f za
-set nobackup
-set shiftwidth=4
+set textwidth=79  " lines longer than 79 columns will be broken
+set shiftwidth=4  " operation >> indents 4 columns; << unindents 4 columns
+set tabstop=4     " an hard TAB displays as 4 columns
+set softtabstop=4 " insert/delete 4 spaces when hitting a TAB/BACKSPACE
+set shiftround    " round indent to multiple of 'shiftwidth'
+set autoindent    " align the new line indent with the previous lineset shiftwidth=4
 set expandtab
 set winminheight=0
 set undolevels=1000
@@ -26,6 +29,7 @@ set smartcase
 set showmatch
 set hlsearch
 set incsearch
+
 syntax enable
 set nobackup
 set nowb
